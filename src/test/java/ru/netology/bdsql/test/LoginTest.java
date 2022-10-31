@@ -23,7 +23,7 @@ public class LoginTest {
         var verificationPage = loginPage.validLogin(authInfo);
         verificationPage.verifyVerificationPageVisibility();
         var verificationCode = DataBase.getValidVerifyCode();
-        verificationPage.validVerify(verificationCode.getVerifyCode());
+        verificationPage.validVerify(verificationCode.getVerifyCode()).visiblePage();
     }
 
     @Test
